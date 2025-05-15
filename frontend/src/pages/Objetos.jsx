@@ -21,7 +21,7 @@ function Objetos() {
   const [showConfirmar, setShowConfirmar] = useState(false);
 
   const fetchObjetos = async () => {
-    const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/objetos/obtenerTodos");
+    const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/objetos/obtenerTodos");
     const data = await res.json();
     setObjetos(data);
   };
