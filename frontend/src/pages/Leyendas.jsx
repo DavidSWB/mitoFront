@@ -22,13 +22,13 @@ function Leyendas() {
   const [showConfirmar, setShowConfirmar] = useState(false);
 
   const fetchLeyendas = async () => {
-    const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/leyendas/obtenerTodos");
+    const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/leyendas/obtenerTodos");
     const data = await res.json();
     setLeyendas(data);
   };
 
   const agregar = async () => {
-    await fetch("http://mitologia-mongo.onrender.com/registroDivino/leyendas/agregarLeyenda", {
+    await fetch("https://mitologia-mongo.onrender.com/registroDivino/leyendas/agregarLeyenda", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -39,7 +39,7 @@ function Leyendas() {
   };
 
   const actualizar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/leyendas/editarLeyendaPorId/${selected.id_leyenda}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/leyendas/editarLeyendaPorId/${selected.id_leyenda}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -51,7 +51,7 @@ function Leyendas() {
   };
 
   const eliminar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/leyendas/eliminarLeyendaPorId/${selected.id_leyenda}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/leyendas/eliminarLeyendaPorId/${selected.id_leyenda}`, {
       method: "DELETE"
     });
     setShowConfirmar(false);

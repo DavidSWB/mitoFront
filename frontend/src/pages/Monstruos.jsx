@@ -22,13 +22,13 @@ function Monstruos() {
   const [showConfirmar, setShowConfirmar] = useState(false);
 
   const fetchMonstruos = async () => {
-    const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/monstruos/obtenerTodos");
+    const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/monstruos/obtenerTodos");
     const data = await res.json();
     setMonstruos(data);
   };
 
   const agregar = async () => {
-    await fetch("http://mitologia-mongo.onrender.com/registroDivino/monstruos/agregarMonstruo", {
+    await fetch("https://mitologia-mongo.onrender.com/registroDivino/monstruos/agregarMonstruo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -39,7 +39,7 @@ function Monstruos() {
   };
 
   const actualizar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/monstruos/editarMonstruoPorId/${selected.id_monstruo}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/monstruos/editarMonstruoPorId/${selected.id_monstruo}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -51,7 +51,7 @@ function Monstruos() {
   };
 
   const eliminar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/monstruos/eliminarMonstruoPorId/${selected.id_monstruo}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/monstruos/eliminarMonstruoPorId/${selected.id_monstruo}`, {
       method: "DELETE"
     });
     setShowConfirmar(false);

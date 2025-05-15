@@ -32,7 +32,7 @@ function Lugares() {
   };
 
   const agregar = async () => {
-    await fetch("http://mitologia-mongo.onrender.com/registroDivino/lugares/agregarLugar", {
+    await fetch("https://mitologia-mongo.onrender.com/registroDivino/lugares/agregarLugar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -43,7 +43,7 @@ function Lugares() {
   };
 
   const actualizar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/lugares/editarLugarPorId/${selected._id}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/lugares/editarLugarPorId/${selected._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -55,7 +55,7 @@ function Lugares() {
   };
 
   const eliminar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/lugares/eliminarLugarPorId/${selected._id}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/lugares/eliminarLugarPorId/${selected._id}`, {
       method: "DELETE"
     });
     setShowConfirmar(false);

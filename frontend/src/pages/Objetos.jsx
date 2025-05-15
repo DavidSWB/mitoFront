@@ -27,7 +27,7 @@ function Objetos() {
   };
 
   const agregar = async () => {
-    await fetch("http://mitologia-mongo.onrender.com/registroDivino/objetos/agregarObjeto", {
+    await fetch("https://mitologia-mongo.onrender.com/registroDivino/objetos/agregarObjeto", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -38,7 +38,7 @@ function Objetos() {
   };
 
   const actualizar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/objetos/editarObjetoPorId/${selected.id_objeto}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/objetos/editarObjetoPorId/${selected.id_objeto}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
@@ -50,7 +50,7 @@ function Objetos() {
   };
 
   const eliminar = async () => {
-    await fetch(`http://mitologia-mongo.onrender.com/registroDivino/objetos/eliminarObjetoPorId/${selected.id_objeto}`, {
+    await fetch(`https://mitologia-mongo.onrender.com/registroDivino/objetos/eliminarObjetoPorId/${selected.id_objeto}`, {
       method: "DELETE"
     });
     setShowConfirmar(false);
