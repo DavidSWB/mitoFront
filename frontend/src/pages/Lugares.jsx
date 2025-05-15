@@ -26,7 +26,7 @@ function Lugares() {
   const [showConfirmar, setShowConfirmar] = useState(false);
 
   const fetchLugares = async () => {
-    const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/lugares/obtenerTodos");
+    const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/lugares/obtenerTodos");
     const data = await res.json();
     setLugares(data);
   };

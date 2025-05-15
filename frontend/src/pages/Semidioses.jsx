@@ -75,7 +75,7 @@ function Semidioses() {
           className="bg-green-600 text-white px-4 py-2 rounded"
           onClick={() => setShowAgregar(true)}
         >
-          Agregar Semidios
+          Agregar Semidioss
         </button>
       </div>
 
