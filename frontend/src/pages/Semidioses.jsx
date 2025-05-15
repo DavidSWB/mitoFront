@@ -27,7 +27,7 @@ function Semidioses() {
   const [showConfirmar, setShowConfirmar] = useState(false);
 
   const fetchSemidioses = async () => {
-    const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/semidioses/obtenerTodos");
+    const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/semidioses/obtenerTodos");
     const data = await res.json();
     setSemidioses(data);
   };
