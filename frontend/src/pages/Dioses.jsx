@@ -54,7 +54,7 @@ export default function Dioses() {
 
   const actualizarDios = async () => {
     try {
-      await fetch(`http://mitologia-mongo.onrender.com/registroDivino/dioses/editarDiosPorId/${selected.id_dios}`, {
+      await fetch(`http://mitologia-mongo.onrender.com/registroDivino/dioses/editarDiosPorId/${selected._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
