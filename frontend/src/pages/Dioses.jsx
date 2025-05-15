@@ -29,7 +29,7 @@ export default function Dioses() {
 
   const fetchDioses = async () => {
     try {
-      const res = await fetch("https://mitologia-mongo.onrender.com/registroDivino/dioses/obtenerTodos");
+      const res = await fetch("http://mitologia-mongo.onrender.com/registroDivino/dioses/obtenerTodos");
       const data = await res.json();
       setDioses(data);
     } catch (error) {
